@@ -1,0 +1,150 @@
+@import url('../../node_modules/bootstrap-icons/font/bootstrap-icons.css');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+:root {
+  display: flex;
+  background-color: rgb(60, 44, 86);
+  color: rgb(200, 240, 190);
+}
+
+body {
+  width: 100%;
+}
+
+.personalInfo,
+.school,
+.practice {
+  position: relative;
+}
+
+.personalFieldset,
+.school > form,
+.practice > form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2vh;
+}
+
+.educationalInfo,
+.practicalInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  box-shadow:
+    -4px -4px 7px 1px rgb(64, 191, 111),
+    4px 4px 7px 1px black;
+}
+
+fieldset > *,
+form > * {
+  margin-top: 1vh;
+}
+
+legend {
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  text-shadow:
+    -1px -1px black,
+    -2px -2px black;
+}
+
+input {
+  height: 2.5vh;
+  border-radius: 6px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.bi {
+  color: white;
+  display: block;
+}
+
+.bi:hover {
+  scale: 1.9;
+}
+
+.editBtn {
+  position: absolute;
+  top: -10px;
+  right: 8px;
+}
+
+.personalEdit {
+  top: 20px;
+  right: 24px;
+}
+
+.deleteBtn {
+  align-self: end;
+  background-color: inherit;
+  border: none;
+  color: red;
+  border-radius: 10px;
+}
+
+.deleteBtn:hover {
+  background-color: red;
+  color: black;
+}
+
+.addBtn {
+  margin: 2vh;
+  padding: 4px;
+  align-self: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.addBtn:hover {
+  scale: 1.2;
+  background-color: rgb(81, 62, 112);
+}
+
+hr {
+  border: 1px dashed white;
+  width: 80%;
+}
+
+@media (width > 550px) {
+  #root {
+    width: 70%;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  fieldset {
+    border-radius: 10px;
+  }
+
+  .personalInfo,
+  .educationalInfo,
+  .practicalInfo {
+    width: clamp(300px, 60%, 400px);
+  }
+
+  .educationalInfo {
+    justify-self: end;
+  }
+
+  .educationalInfo > fieldset {
+    box-shadow:
+      4px 4px 7px 1px rgb(64, 191, 111),
+      -4px -4px 7px 1px rgb(10, 10, 10);
+  }
+}
